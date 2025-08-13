@@ -76,6 +76,10 @@ body {
         transition: background 0.3s;
         z-index: 10;
         user-select: none;
+        transition: transform 0.2s ease-in-out;
+    }
+    #button:hover {
+        backdrop-filter: blur(10px);
     }
     .telecharger{
         border-radius: 5px 5px 15px 5px;
@@ -90,9 +94,10 @@ body {
         padding: auto;
         color: black;
         z-index: 2;
+        transition: transform 0.2s ease-in-out;
     }
-    button:hover {
-        backdrop-filter: blur(10px);
+    .telecharger:hover{
+        transform: scale(1.05);
     }
     .prev { 
         left: 10px;
@@ -173,7 +178,7 @@ body {
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         width: 80%;
-        height: 30%;
+        height: 35%;
         color: white;
         overflow-y: auto;
         overflow-x: hidden;
