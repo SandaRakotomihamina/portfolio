@@ -21,7 +21,7 @@ updateClasses();
 
 document.getElementById("telecharger").addEventListener("click", function() {
     const link = document.createElement("a");
-    link.href = "doc/cv.pdf"; 
+    link.href = "cv.pdf"; 
     link.download = "cv_de_Sanda.pdf";
     document.body.appendChild(link);
     link.click();
