@@ -1,123 +1,109 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio</title>
-<link rel="stylesheet" href="css/main.css">
-<style></style>
-
-</head>
-<body>
-
-<div class="wrapper">
-    <button id="button" class="prev">◀</button>
-
-    <div class="card active">
-        <h1 style="margin: 5% 0 0 5%;">A propos</h1>
-        <h4 style="margin: 5% 0 0 5%;">Sanda Fitia Rakotomihamina, 19 ans</h4>
-        <img src="images/sanda1.png" class="picture" style="height: 70%;">
-        <div class="texte">
-            <h4>
-                Etudiant de deuxième année en informatique général à l’Ecole Nationale
-                d’Informatique, Université de Fianarantsoa. Je suis un jeune développeur 
-                passionné par les nouvelles technologies, notamment la programmation 
-                web. Je suis actuellement à la recherche d’un stage de trois mois pour acquérir de 
-                nouvelles expériences dans le monde professionnel et par la même 
-                occasion conclure mes études en deuxième année de licence.
-            </h4>   
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <button id="button" class="prev">❰</button>
+            <div class="card active">
+                <h1 style="margin: 5% 0 0 5%;" id="titre">À propos:</h1>
+                <h4 style="margin: 5% 0 0 5%;">Sanda Fitia Rakotomihamina, 19 ans</h4>
+                <img src="images/sanda1.png" class="picture" style="height: 70%;">
+                <div class="texte">
+                    <h4 id="texte"></h4>   
+                </div>
+                <button class="telecharger" id="telecharger"><span class="btn">Télécharger mon CV</span></button>
+            </div>
+            <div class="card right">
+                <h1 style="margin: 5% 0 0 5%;" id="titre">Mes parcourts et projets:</h1>
+                <div class="projet-liste">
+                    <div style="margin: 5% 0 0 5%;">
+                        <h3>STAR GAME</h3>
+                        <p>
+                            Un jeu mobile mettant en scène un vaisseau spacial qui tire sur des missiles ennemis. <br>
+                            Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Star-game">Star-game</a><br> 
+                            Développer en Python <br>
+                        </p>
+                        
+                    </div>
+                    <div style="margin: 5% 0 0 5%;">
+                        <h3>GESTION DE STOCK DE VENTE DE PRODUIT</h3>
+                        <p>
+                            Application web pour avoir une vision et gestion global du stock de produit d'un fourniseur.<br>
+                            Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Gestion-des-stock">gestion de stock</a><br> 
+                            Développer en Vue.JS et PHP<br>
+                        </p>
+                    </div>
+                    <div style="margin: 5% 0 0 5%;">
+                        <h3>PAYEMENT DE BOURSE UNIVERSITAIRE</h3>
+                        <p>
+                            Application mobile pour facilité et automatisé le payement des bourses des étudiants Universitaire <br>
+                            Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Gestion-de-payement-des-bourses-universitaires">Payement de bourse</a><br> 
+                            Développer en Java
+                        </p>
+                    </div>
+                    <div style="margin: 5% 0 0 5%;">
+                        <h3>ADMIN SOCIETE</h3>
+                        <p>
+                            Site de manipulation des données des employés d”une société, conçu pour modifier, licencier, recruter, payer les employer automatiquement.<br>
+                            Développer en Vue.JS et PHP<br>
+                        </p>
+                    </div>
+                    <div style="margin: 5% 0 0 5%;">
+                        <h3>GESTION DES RESSOURCES D’UNE BANQUE</h3>
+                        <p>
+                            Application développer pour l’automatisation des tâches comme: transactions, manipulation des taux et gestion des données clients dans une banque.
+                            Développer en C++, Qt
+                        </p>
+                    </div>
+                </div>
+                <img src="images/sanda2.png" class="picture" style="height: 70%;">
+                <a href="https://github.com/SandaRakotomihamina?tab=repositories">
+                    <button class="telecharger"><span class="btn">Voir les projets</span></button>
+                </a>
+            </div>
+            <div class="card left">
+                <h1 style="margin: 5% 0 0 5%;" id="titre">Contactes:</h1>
+                <div class="contactes">
+                    <div style="display: flex;">
+                        <a href="https://www.facebook.com/sanda.rakotomihamina">
+                            <img src="images/Facebook.svg" alt="Facebook">
+                            <span>Sandaa Rakotomihamina</span>
+                        </a>
+                    </div>
+                    <div style="display: flex;">
+                        <a href="https://www.instagram.com/sanda_rakotomihamina/">
+                            <img src="images/Instagram.svg" alt="Instagram">
+                            <span>Sanda_Rakotomihamina</span>
+                        </a>
+                    </div>
+                    <div style="display: flex;">
+                        <a href="https://github.com/SandaRakotomihamina">
+                            <img src="images/GitHub.svg" alt="GitHub">
+                            <span>SandaRakotomihamina</span>
+                        </a>
+                    </div>
+                    <div style="display: flex;">
+                        <a href="https://linkedin.com/in/sanda.rakotomihamina">
+                            <img src="images/LinkedIn.svg" alt="LinkedIn">
+                            <span>Sanda Rakotomihamina</span>
+                        </a>
+                    </div>
+                    <div style="display: flex;">
+                        <a href="mailto:rakotomihaminasandafitia@gmail.com">
+                            <img src="images/Gmail.svg" alt="Email">
+                            <span>rakotomihaminasandafitia@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <img src="images/sanda3.png" class="picture" style="height: 80%;">
+            </div>
+            <button id="button" class="next">❱</button>
         </div>
-        <button class="telecharger" id="telecharger"><span class="btn">Télécharger mon CV</span></button>
-    </div>
-    <div class="card right">
-        <h1 style="margin: 5% 0 0 5%;">Mes parcourts et projets:</h1>
-        <div class="projet-liste">
-            <div style="margin: 5% 0 0 5%;">
-                <h3>STAR GAME</h3>
-                <p>
-                    Un jeu mobile mettant en scène un vaisseau spacial qui tire sur des
-                    missiles ennemis. <br>
-                    Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Star-game">Star-game</a><br> 
-                    Développer en Python <br>
-                </p>
-                
-            </div>
-            <div style="margin: 5% 0 0 5%;">
-                <h3>GESTION DE STOCK DE VENTE DE PRODUIT</h3>
-                <p>
-                    Application web pour avoir une vision et gestion global du stock de produit d'un fourniseur.<br>
-                    Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Gestion-des-stock">gestion de stock</a><br> 
-                    Développer en Vue.JS et PHP<br>
-                </p>
-            </div>
-            <div style="margin: 5% 0 0 5%;">
-                <h3>PAYEMENT DE BOURSE UNIVERSITAIRE</h3>
-                <p>
-                    Application mobile pour facilité et automatisé le payement des bourses des étudiants Universitaire <br>
-                    Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Gestion-de-payement-des-bourses-universitaires">Payement de bourse</a><br> 
-                    Développer en Java
-                </p>
-            </div>
-            <div style="margin: 5% 0 0 5%;">
-                <h3>ADMIN SOCIETE</h3>
-                <p>
-                    Site de manipulation des données des employés d”une société, conçu pour modifier, licencier, recruter, payer les employer automatiquement.<br>
-                    Développer en Vue.JS et PHP<br>
-                </p>
-            </div>
-            <div style="margin: 5% 0 0 5%;">
-                <h3>GESTION DES RESSOURCES D’UNE BANQUE</h3>
-                <p>
-                    Application développer pour l’automatisation des tâches comme: transactions, manipulation des taux et gestion des données clients dans une banque.
-                    Développer en C++, Qt
-                </p>
-            </div>
-        </div>
-        <img src="images/sanda2.png" class="picture" style="height: 70%;">
-        <a href="https://github.com/SandaRakotomihamina?tab=repositories">
-            <button class="telecharger"><span class="btn">Voir les projets</span></button>
-        </a>
-    </div>
-    <div class="card left">
-        <h1 style="margin: 5% 0 0 5%;">Contactes</h1>
-        <div class="contactes">
-            <div style="display: flex;">
-                <a href="https://www.facebook.com/sanda.rakotomihamina">
-                    <img src="images/Facebook.svg" alt="Facebook">
-                    <span>Sandaa Rakotomihamina</span>
-                </a>
-            </div>
-            <div style="display: flex;">
-                <a href="https://www.instagram.com/sanda_rakotomihamina/">
-                    <img src="images/Instagram.svg" alt="Instagram">
-                    <span>Sanda_Rakotomihamina</span>
-                </a>
-            </div>
-            <div style="display: flex;">
-                <a href="https://github.com/SandaRakotomihamina">
-                    <img src="images/GitHub.svg" alt="GitHub">
-                    <span>SandaRakotomihamina</span>
-                </a>
-            </div>
-            <div style="display: flex;">
-                <a href="https://linkedin.com/in/sanda.rakotomihamina">
-                    <img src="images/LinkedIn.svg" alt="LinkedIn">
-                    <span>Sanda Rakotomihamina</span>
-                </a>
-            </div>
-            <div style="display: flex;">
-                <a href="mailto:rakotomihaminasandafitia@gmail.com">
-                    <img src="images/Gmail.svg" alt="Email">
-                    <span>rakotomihaminasandafitia@gmail.com</span>
-                </a>
-            </div>
-        </div>
-        <img src="images/sanda3.png" class="picture" style="height: 80%;">
-    </div>
-
-    <button id="button" class="next">▶</button>
-</div>
-
-<script src="javascript/main.js"></script>
-</body>
+        <script src="javascript/main.js"></script>
+    </body>
 </html>
