@@ -7,8 +7,16 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <div class="wrapper">
+        <!-- Texte de bienvenue -->
+        <div id="welcome">
+            <h1> <span class="bienvenue">Bienvenue sur mon portfolio !</span></h1>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class="wrapper" style="display:none;">
             <button id="button" class="prev">❰</button>
+
+            <!-- Carte 1 -->
             <div class="card active">
                 <h1 style="margin: 5% 0 0 5%;" id="titre">À propos:</h1>
                 <h4 style="margin: 5% 0 0 5%;">Sanda Fitia Rakotomihamina, 19 ans</h4>
@@ -18,8 +26,12 @@
                 </div>
                 <button class="telecharger" id="telecharger"><span class="btn">Télécharger mon CV</span></button>
             </div>
+
+            <!-- Carte 2 -->
             <div class="card right">
                 <h1 style="margin: 5% 0 0 5%;" id="titre">Mes parcourts et projets:</h1>
+                <img src="images/sanda2.png" class="picture" style="height: 70%;">
+
                 <div class="projet-liste">
                     <div style="margin: 5% 0 0 5%;">
                         <h3>STAR GAME</h3>
@@ -28,7 +40,6 @@
                             Lien vers le code source: <a href="https://github.com/SandaRakotomihamina/Star-game">Star-game</a><br> 
                             Développer en Python <br>
                         </p>
-                        
                     </div>
                     <div style="margin: 5% 0 0 5%;">
                         <h3>GESTION DE STOCK DE VENTE DE PRODUIT</h3>
@@ -61,61 +72,126 @@
                         </p>
                     </div>
                 </div>
-                <img src="images/sanda2.png" class="picture" style="height: 70%;">
                 <a href="https://github.com/SandaRakotomihamina?tab=repositories">
                     <button class="telecharger"><span class="btn">Voir les projets</span></button>
                 </a>
             </div>
+
+            <!-- Carte 3 -->
             <div class="card left">
+                <h1 style="margin: 5% 0 0 5%;">Mes compétences:</h1>
+                <img src="images/sanda3.png" class="picture" style="height: 80%;">
+                <div class="langages">
+                    <div style="display: inline-block;">
+                        <h3 style="margin: 5% 0 0 5%;">Langages de programmation:</h3>
+                        <img src="images/c.png" alt="C">
+                        <img src="images/c++.png" alt="C++">
+                        <img src="images/cs.png" alt="C#">
+                        <img src="images/python.png" alt="Python">
+                        <img src="images/php.png" alt="PHP">
+                        <img src="images/java.png" alt="Java">
+                    </div>
+                    <div>
+                        <h3 style="margin: 5% 0 0 5%;">Frameworks:</h3>
+                        <img src="images/qt.png" alt="Qt">
+                        <img src="images/vuejs.png" alt="Vue.JS">
+                        <img src="images/symfony.png" alt="Symfony">
+                    </div>
+                    <div>
+                        <h3 style="margin: 5% 0 0 5%;">Langages web:</h3>
+                        <img src="images/html.png" alt="HTML">
+                        <img src="images/css.png" alt="CSS">
+                        <img src="images/javascript.png" alt="Javascript">
+                    </div>
+                    <div>
+                        <h3 style="margin: 5% 0 0 5%;">S.G.B.D.:</h3>
+                        <img src="images/mysql.png" alt="MySQL">
+                        <img src="images/sqlite.png" alt="SQlite">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 4 -->
+            <div class="card">
+                <h1 style="margin: 5% 0 0 5%;">Hobbies et centres d'intérêt:</h1>
+                <img src="images/sanda4.png" class="picture" style="height: 80%;">
+                <div class="hobbies">
+                    <div>
+                        <img src="images/sport.png" alt="Sport">
+                        <p>Sports</p>
+                    </div>
+                    <div>
+                        <img src="images/cinema.png" alt="Cinema">
+                        <p>Cinema/Films</p>
+                    </div>
+                    <div>
+                        <img src="images/jeux.png" alt="Jeux Video">
+                        <p>Jeux Vidéo</p>
+                    </div>
+                    <div>
+                        <img src="images/livre.png" alt="Lecture">
+                        <p>Lecture</p>
+                    </div>
+                    <div>
+                        <img src="images/echec.png" alt="Echec">
+                        <p>Jeux d'échec</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 5 -->
+            <div class="card">
                 <h1 style="margin: 5% 0 0 5%;" id="titre">Contactes:</h1>
+                <img src="images/sanda5.png" class="picture" style="height: 80%;">
                 <div class="contactes">
                     <div style="display: flex;">
                         <a href="https://www.facebook.com/sanda.rakotomihamina">
                             <img src="images/Facebook.svg" alt="Facebook">
-                            <span>Sandaa Rakotomihamina</span>
+                            <span style="max-width: 100%;">Sandaa Rakotomihamina</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="https://www.instagram.com/sanda_rakotomihamina/">
                             <img src="images/Instagram.svg" alt="Instagram">
-                            <span>Sanda_Rakotomihamina</span>
+                            <span style="max-width: 100%;">Sanda_Rakotomihamina</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="https://github.com/SandaRakotomihamina">
                             <img src="images/GitHub.svg" alt="GitHub">
-                            <span>SandaRakotomihamina</span>
+                            <span style="max-width: 100%;">SandaRakotomihamina</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="https://linkedin.com/in/sanda.rakotomihamina">
                             <img src="images/LinkedIn.svg" alt="LinkedIn">
-                            <span>Sanda Rakotomihamina</span>
+                            <span style="max-width: 100%;">Sanda Rakotomihamina</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="mailto:rakotomihaminasandafitia@gmail.com">
                             <img src="images/Gmail.svg" alt="Email">
-                            <span>rakotomihaminasandafitia@gmail.com</span>
+                            <span style="max-width: 100%;">rakotomihaminasandafitia@gmail.com</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="tel:+261347218940">
-                            <img src="images/phone.svg" alt="Phone1">
-                            <span>+261 34 72 189 40</span>
+                            <img src="images/phone.svg" alt="Phone">
+                            <span style="max-width: 100%;">+261 34 72 189 40</span>
                         </a>
                     </div>
                     <div style="display: flex;">
                         <a href="tel:+261333549507">
-                            <img src="images/phone.svg" alt="Phone2">
-                            <span>+261 33 35 495 07</span>
+                            <img src="images/phone.svg" alt="Phone">
+                            <span style="max-width: 100%;">+261 33 35 495 07</span>
                         </a>
                     </div>
                 </div>
-                <img src="images/sanda3.png" class="picture" style="height: 80%;">
             </div>
+            
             <button id="button" class="next">❱</button>
         </div>
+
         <script src="javascript/main.js"></script>
     </body>
 </html>
