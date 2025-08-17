@@ -7,20 +7,64 @@ body {
     margin: 0;
     color: white;
     overflow: hidden;
-    background-image: none;
     cursor: default;
 }
 span.btn {
-    background: linear-gradient(135deg, #24b8dd, #2053df, #401ba5); 
+    background: linear-gradient(
+        135deg, 
+        rgba(226, 114, 22, 0.8), 
+        rgba(241, 5, 5, 0.7), 
+        rgba(40, 60, 235, 0.6), 
+        rgba(155, 27, 194, 0.5)
+    ); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
+span.bienvenue {
+    background: linear-gradient(
+        135deg, 
+        rgba(226, 114, 22, 0.8), 
+        rgba(241, 5, 5, 0.7), 
+        rgba(40, 60, 235, 0.6), 
+        rgba(155, 27, 194, 0.5)
+    ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+#welcome {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding: auto;
+    width: 100%; 
+    height: 100%;
+    background-color: #303030;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 50;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
 .wrapper {
     position: relative;
     width: 80vw;
     height: 60vh;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 .card {
     position: absolute;
@@ -40,28 +84,18 @@ span.btn {
     background-repeat: no-repeat;
     animation: moveClouds 1s ease-in-out infinite;
 }
-
 @keyframes moveClouds {
   0% {
     background-position:
-      0% 0%,
-      50% 20%,
-      20% 60%,
-      80% 90%;
+      0% 0%, 50% 20%, 20% 60%, 80% 90%;
   }
   50% {
     background-position:
-      10% 10%,
-      60% 25%,
-      25% 65%,
-      90% 85%;
+      10% 10%, 60% 25%, 25% 65%, 90% 85%;
   }
   100% {
     background-position:
-      0% 0%,
-      50% 20%,
-      20% 60%,
-      80% 90%;
+      0% 0%, 50% 20%, 20% 60%, 80% 90%;
   }
 }
 .card .texte {
@@ -74,19 +108,19 @@ span.btn {
     z-index: 2;
     overflow-y: auto;
     overflow-x: hidden;
-    box-sizing: border-box;
     padding: 0px;
     margin-left: 5%;
 }
 .active {
     transform: translate(-50%, -50%) scale(1.2);
+    background-color: rgba(50, 50, 50, 1);
     z-index: 3;
 }
 .picture {
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 120%;
+    max-width: 100%;
     height: auto;
     z-index: 1;
 }
@@ -101,10 +135,8 @@ span.btn {
     font-size: 3rem;
     color: white;
     cursor: pointer;
-    transition: background 0.3s;
     z-index: 10;
     user-select: none;
-    transition: transform 0.2s ease-in-out;
 }
 #button:hover {
     backdrop-filter: blur(5px);
@@ -115,18 +147,16 @@ span.btn {
     right: 10px;
     position: absolute;
     background-color: rgb(207, 207, 207);
-    transform: translateY(0%);
     width: 150px;
     height: 30px;
     font-size: 0.8rem;
-    padding: auto;
-    z-index: 2;
-    transition: transform 0.2s ease-in-out;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 3;
 }
 .telecharger:hover{
     transform: scale(1.05);
-    font: bold;
+    font-weight: bold;
 }
 .prev {left: 10px;}
 .next {right: 10px;}
@@ -138,6 +168,16 @@ span.btn {
     transform: translate(70%, -50%) scale(0.9) rotateY(-15deg);
     z-index: 2;
 }
+
+.left2 {
+    transform: translate(-280%, -50%) scale(0.8) rotateY(18deg);
+    z-index: 1;
+}
+.right2 {
+    transform: translate(140%, -50%) scale(0.8) rotateY(-18deg);
+    z-index: 1;
+}
+
 .projet-liste{
     position: relative;
     display: inline-block;
@@ -163,36 +203,112 @@ span.btn {
     backdrop-filter: blur(5px);
 }
 @media (max-width: 768px) {
-    .wrapper {
-        width: 100%;
-        height: 90vh;
+    .wrapper { 
+        width: 100%; 
+        height: 90vh; 
     }
-    .card {
-        width: 70vw;  
+    .card { 
+        width: 70vw; 
         height: 80vh; 
     }
-    .left {
-        transform: translate(-160%, -50%) scale(0.85) rotateY(15deg);
+    .left { 
+        transform: translate(-160%, -50%) scale(0.85) rotateY(15deg); 
     }
-    .right {
-        transform: translate(60%, -50%) scale(0.85) rotateY(-15deg);
+    .right { 
+        transform: translate(60%, -50%) scale(0.85) rotateY(-15deg); 
     }
-    #button {
-        padding: 1.6rem;
-        font-size: 2rem;
+    .left2 { 
+        transform: translate(-250%, -50%) scale(0.75) rotateY(18deg); 
     }
-    
-    .prev {left: 5px;}
+    .right2 { 
+        transform: translate(120%, -50%) scale(0.75) rotateY(-18deg); 
+    }
+    #button { 
+        padding: 1.6rem; font-size: 2rem; 
+    }
+    .prev {left: 5px;} 
     .next {right: 5px;}
-}
-@media (min-width: 1200px) {
-    .wrapper {
-        width: 1000px;
-        height: 500px;
+    .hobbies div{
+        text-align: center;
+        padding: auto;
+        width: 60%;
+        height: 60%;
+        border-radius: 5px;
     }
-    .card {
-        width: 60vw;  
-        height: 40vw;
+    .langages img{
+        margin-left: 5%;
+        width: 12%;
+        height: 12%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+    .wrapper { 
+        width: 95vw; 
+        height: 80vh; 
+    }
+    .card { 
+        width: 62vw; 
+        height: 80vh; 
+    }
+    .left { 
+        transform: translate(-160%, -50%) scale(0.9) rotateY(15deg); 
+        z-index: 2;
+    }
+    .right { 
+        transform: translate(60%, -50%) scale(0.9) rotateY(-15deg); 
+        z-index: 2;
+    }
+    .left2 { 
+        transform: translate(-230%, -50%) scale(0.8) rotateY(18deg); 
+        z-index: 1;
+    }
+    .right2 { 
+        transform: translate(110%, -50%) scale(0.8) rotateY(-18deg); 
+        z-index: 1;
+    }
+    #button { 
+        padding: 1.2rem; 
+        font-size: 2.6rem; 
+    }
+    .prev { left: 8px; } 
+    .next { right: 8px; }
+    .hobbies div{
+        text-align: center;
+        padding: auto;
+        width: 65%;
+        height: 60%;
+        border-radius: 5px;
+    }
+    .langages img{
+        margin-left: 5%;
+        width: 10%;
+        height: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper { 
+        width: 100%; 
+        height: 90vh; 
+    }
+    .card { 
+        width: 60vw; 
+        height: 80vh; 
+    }
+
+    .langages img{
+        margin-left: 5%;
+        width: 7%;
+        height: 7%;
+    }
+
+    .hobbies div{
+        text-align: center;
+        padding: auto;
+        width: 100%;
+        height: 30%;
+        border-radius: 5px;
     }
 }
 .contactes {
@@ -215,16 +331,55 @@ span.btn {
     margin: 10px 0;
     transition: transform 0.2s ease-in-out;
     color: white;
+    cursor: pointer;
 }
 .contactes a:hover {
     transform: scale(1.05);
     backdrop-filter: blur(5px);
 }
-.contactes img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+.contactes img { 
+    width: 30px; 
+    height: 30px; 
+    margin-right: 10px; 
 }
-.contactes span {
-    font-size: 16px;
+.contactes span { 
+    font-size: 16px; 
+}
+
+.langages{
+    position: relative;
+    display: inline-block;
+    overflow-y: auto;
+    overflow-x: none;
+    width: 80%;
+    height: 76%;
+    z-index: 3;
+}
+
+.langages img:hover{
+    transform: scale(1.05);
+    backdrop-filter: blur(5px);
+}
+
+.hobbies{
+    margin-left: 5%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: none;
+    width: 80%;
+    height: 65%;
+    z-index: 2;
+}
+
+.hobbies div:hover {
+    transform: scale(1.05);
+    backdrop-filter: blur(5px);
+}
+.hobbies img {
+    width: 50%;
+    height: 50%;
 }
