@@ -1,9 +1,10 @@
-html, body {
-    width: 100%;
-    height: 100%;
+html {
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -11,18 +12,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0;
+    padding: 0%;
     color: white;
-    overflow: hidden;
     cursor: default;
-    min-height: 100dvh;
-    overflow-y: hidden;
 }
 span.btn {
     background: linear-gradient(
         135deg, 
-        rgba(226, 114, 22, 0.8), 
+        rgba(226, 114, 22, 0.8),
         rgba(241, 5, 5, 0.7), 
         rgba(40, 60, 235, 0.6), 
         rgba(155, 27, 194, 0.5)
@@ -67,14 +67,18 @@ span.bienvenue {
 .wrapper {
     position: relative;
     width: 80vw;
-    height: 60vh;
+    height: 100vh;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .wrapper.show {
     opacity: 1;
     transform: translateY(0);
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .card {
     position: absolute;
@@ -215,7 +219,9 @@ span.bienvenue {
 @media (max-width: 768px) {
     .wrapper { 
         width: 100%; 
-        height: 90vh; 
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden; 
     }
     .card { 
         width: 70vw; 
@@ -255,7 +261,9 @@ span.bienvenue {
 @media (min-width: 769px) and (max-width: 1199px) {
     .wrapper { 
         width: 95vw; 
-        height: 80vh; 
+        height: 100vh; 
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .card { 
         width: 62vw; 
@@ -300,7 +308,9 @@ span.bienvenue {
 @media (min-width: 1200px) {
     .wrapper { 
         width: 100%; 
-        height: 90vh; 
+        height: 100vh; 
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     .card { 
         width: 60vw; 
