@@ -230,9 +230,13 @@ span.bienvenue {
         overflow-y: hidden; 
     }
     .card { 
-        width: 90vw;
-        height: auto; 
-        min-height: 80vh; 
+        width: 70vw; 
+        height: 80vh; 
+        top: 45%;
+    }
+    .active {
+        transform: translate(-50%, -50%) scale(1.2);
+        top: 48%;
     }
     .left { 
         transform: translate(-160%, -50%) scale(0.85) rotateY(15deg); 
