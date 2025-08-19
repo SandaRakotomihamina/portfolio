@@ -65,12 +65,7 @@ span.bienvenue {
     overflow-x: hidden;
     overflow-y: hidden;
 }
-.wrapper.show {
-    opacity: 1;
-    transform: translateY(0);
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
+
 .card {
     position: absolute;
     top: 50%;
@@ -217,13 +212,19 @@ span.bienvenue {
     }
     .wrapper { 
         width: 100%; 
-        height: 60vh;
+        height: 100vh;
         overflow-x: hidden;
         overflow-y: hidden; 
     }
+    .wrapper.show {
+        opacity: 1;
+        transform: translateY(0);
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     .card { 
         width: 70vw; 
-        height: 75vh; 
+        height: 80vh; 
     }
     .left { 
         transform: translate(-160%, -50%) scale(0.85) rotateY(15deg); 
@@ -262,6 +263,12 @@ span.bienvenue {
         height: 100vh;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .wrapper.show {
+        opacity: 1;
+        transform: translateY(0);
         overflow-x: hidden;
         overflow-y: hidden;
     }
@@ -317,6 +324,12 @@ span.bienvenue {
         height: 100vh;
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .wrapper.show {
+        opacity: 1;
+        transform: translateY(0);
         overflow-x: hidden;
         overflow-y: hidden;
     }
