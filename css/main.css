@@ -224,7 +224,7 @@ span.bienvenue {
     }
     .card { 
         width: 70vw; 
-        height: 80vh; 
+        height: 75vh; 
     }
     .left { 
         transform: translate(-160%, -50%) scale(0.85) rotateY(15deg); 
