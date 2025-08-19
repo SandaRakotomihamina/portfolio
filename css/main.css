@@ -216,12 +216,6 @@ span.bienvenue {
         overflow-x: hidden;
         overflow-y: hidden; 
     }
-    .wrapper.show {
-        opacity: 1;
-        transform: translateY(0);
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
     .card { 
         width: 70vw; 
         height: 80vh; 
